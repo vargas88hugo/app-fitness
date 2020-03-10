@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "project01",
+      "public": "dist/project01",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
