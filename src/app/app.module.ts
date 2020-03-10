@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { StopTrainingComponent } from './training/current-training/stop-training
 import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
 import { environment } from '../environments/environment'
+import { UIService } from './shared/ui.service';
 
 @NgModule({
   declarations: [
@@ -50,11 +52,13 @@ import { environment } from '../environments/environment'
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireAnalyticsModule
+    AngularFireAnalyticsModule,
+    AngularFireAuthModule
   ],
   providers: [
     AuthService,
-    TrainingService
+    TrainingService,
+    UIService
   ],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
