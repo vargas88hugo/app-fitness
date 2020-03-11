@@ -26,12 +26,11 @@ import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
 import { environment } from '../environments/environment'
 import { UIService } from './shared/ui.service';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
-    LoginComponent,
     TrainingComponent,
     CurrentTrainingComponent,
     NewTrainingComponent,
@@ -43,17 +42,16 @@ import { UIService } from './shared/ui.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     NoopAnimationsModule,
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    FormsModule,
-    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAnalyticsModule,
-    AngularFireAuthModule
+    AuthModule
   ],
   providers: [
     AuthService,
