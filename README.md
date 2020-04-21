@@ -1,6 +1,6 @@
 # App-Fitness
 
-This is a native app in Angular about fitness and training. I used Angular Material to the frontend and eventually I will implement Spring
+This is a native app in Angular about fitness and training. I used Angular Material to the frontend and firebase.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
